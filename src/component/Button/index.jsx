@@ -4,7 +4,7 @@ import classes from './Button.css';
 export class Button extends Component {
   render () {
     return (
-      <button className={classes.Button}>
+      <button className={classes.button}>
         Hello World
       </button>
     );
