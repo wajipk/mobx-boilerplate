@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from './component/Button/index.jsx';
 
-const reactLogo = require('./assets/images/react.png');
+const reactLogo = require('../public/images/react.png');
 ReactDOM.render(
   <div>
     <h1>React</h1>
