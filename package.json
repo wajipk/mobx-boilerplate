@@ -6,8 +6,8 @@
   "author": "Wajahat Qasim & Taqi Mustafa",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server",
-    "prod": "npm run clean && SET NODE_ENV=production && webpack -p",
+    "start": "node server.js",
+    "prod": "npm run clean && SET NODE_ENV=production && webpack -p --progress",
     "clean": "rimraf ./dist/*",
     "lint": "eslint src"
   },

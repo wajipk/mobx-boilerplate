@@ -92,22 +92,38 @@ module.exports = {
 	},
 	cache : true,
 	devtool: 'source-map',
-	devServer: {
+	/*devServer: {
 		contentBase: path.join(__dirname, 'dist'),
 		compress: true,
 		stats: 'errors-only',
 		hot: true,
 		open: false,
 		port: 4000,
-	},
-	plugins: [
+	},*/
+	plugins: !isProduction ? [
 		new HtmlWebpackPlugin({
 			title: 'Project Demo',
 			minify: {
 				collapseWhitespace: isProduction,
 			},
 			hash: false,
-			template: './src/index.html',
+			template: './index.html',
+		}),
+		new ExtractTextPlugin({
+			filename: 'app.css',
+			disable: !isProduction,
+			allChunks: true,
+		}),
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.NamedModulesPlugin(),
+	] : [
+		new HtmlWebpackPlugin({
+			title: 'Project Demo',
+			minify: {
+				collapseWhitespace: isProduction,
+			},
+			hash: false,
+			template: './index.html',
 		}),
 		new ExtractTextPlugin({
 			filename: 'app.css',
