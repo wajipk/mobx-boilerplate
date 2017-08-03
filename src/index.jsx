@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from './component/Button/index.jsx';
-import classes from './index.scss';
+import classes from './index.css';
 
 const reactLogo = require('../public/images/react.png');
 ReactDOM.render(
