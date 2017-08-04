@@ -14,8 +14,11 @@ if(isProduction){
 		next();
 	});
 	app.use('/assets', express.static(__dirname + '/assets'));
+	app.get('*.js', function(req, res) {
+		res.sendFile(path.join(__dirname, 'dist/'+req.url));
+	});
 	app.get('*', function(req, res) {
-		res.sendFile(path.join(__dirname, 'index.html'));
+		res.sendFile(path.join(__dirname, 'dist/index.html'));
 	});
 }
 else{
