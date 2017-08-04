@@ -37,11 +37,8 @@ module.exports = {
       '.js', '.jsx'
     ],
     alias: {
-      assets: path.resolve('public'),
       components: path.resolve('src/components'),
-      general: path.resolve('src/general'),
-      layouts: path.resolve('src/layouts'),
-      routes: path.resolve('src/routes'),
+      views: path.resolve('src/views'),
       styles: path.resolve('src/styles')
     }
   },
