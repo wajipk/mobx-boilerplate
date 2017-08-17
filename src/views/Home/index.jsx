@@ -4,7 +4,7 @@ export default class Home extends Component {
   render() {
     console.log(this.props);
     return (
-      <div>
+      <div className="heading">
         Home
       </div>
     );

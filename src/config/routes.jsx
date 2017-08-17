@@ -10,8 +10,10 @@ const history = createBrowserHistory();
 const CustomRouter = () => (
   <Router history={history}>
     <Switch>
-      <Route exact path="/" component={Home} history={history}/>
-      <Route path="/about" component={About} history={history}/>
+      <Route exact path="/" component={Home} history={history} />
+      <Route path="/about" render={() => (<div>About</div>)} history={history} />
+      <Route path="/about/me" render={() => (<div>Me</div>)} history={history} />
+      <Route path="*" render={() => (<div>404</div>)} history={history} />
     </Switch>
   </Router>
 );
