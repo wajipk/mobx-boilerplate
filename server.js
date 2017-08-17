@@ -18,6 +18,9 @@ if (isProduction) {
   app.get('*.js', (req, res) => {
     res.sendFile(path.join(__dirname, `dist/${req.url}`));
   });
+  app.get('*.css', (req, res) => {
+    res.sendFile(path.join(__dirname, `dist/${req.url}`));
+  });
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
